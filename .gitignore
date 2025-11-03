@@ -22,8 +22,8 @@ tutoring_data.csv
 .DS_Store
 Thumbs.db
 
-# Streamlit
-.streamlit/
+# Streamlit (but keep config for deployment)
+.streamlit/secrets.toml
 
 # Environment
 .env
