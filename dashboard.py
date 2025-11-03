@@ -59,8 +59,18 @@ def load_data():
         df['session_date'] = pd.to_datetime(df['session_date'])
         return df
     except FileNotFoundError:
-        st.error("⚠️ tutoring_data.csv not found. Please run generate_data.py first.")
-        st.stop()
+        st.warning("⚠️ tutoring_data.csv not found. Generating sample data...")
+        try:
+            from generate_data import generate_tutoring_data
+            generate_tutoring_data()
+            st.success("✅ Sample data generated successfully!")
+            df = pd.read_csv("tutoring_data.csv")
+            df['session_date'] = pd.to_datetime(df['session_date'])
+            return df
+        except Exception as e:
+            st.error(f"❌ Failed to generate data: {str(e)}")
+            st.info("Please run: `python generate_data.py` manually")
+            st.stop()
 
 
 def calculate_risk_metrics(df):
