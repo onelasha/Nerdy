@@ -1,0 +1,178 @@
+NERDY - DIRECTOR OF ENGINEERING CASE STUDY
+Time: Max 3 hours
+
+THE CHALLENGE:
+Build an AI-powered dashboard that identifies at-risk students in Varsity Tutors and recommends interventions.
+
+REQUIREMENTS:
+- Student list with risk indicators (high/medium/low)
+- AI-generated explanations of WHY each student is at-risk
+- AI-generated action recommendations per student
+- At least one data visualization (engagement trends, etc.)
+
+TECHNICAL REQUIREMENTS:
+- Must use an LLM (Claude, OpenAI, Gemini, etc) for risk explanations and recommendations
+- Deploy to public URL (Vercel, Netlify, etc.)
+- Load time <3 seconds
+- Tech stack: Your choice (React, Vue, Python, Node.js, etc.)
+- AI coding tools: Use any (Cursor, Claude Code, Copilot, Windsurf, etc)
+
+SUBMISSION REQUIREMENTS:
+1. Deployed dashboard URL (public link)
+2. GitHub repository
+3. 3-5 min demo video link (Loom/YouTube/etc)
+4. AI development evidence:
+   - Development log with prompts & timestamps
+   - Git history with AI attribution
+
+REQUIRED DOCUMENTATION (README):
+1. Setup - How to run locally
+2. AI Development Process ⭐ - Which tools, % AI-generated, effective prompts, time breakdown
+3. Risk Logic - How you define "at-risk" and why
+4. AI Implementation - How you're using LLM for insights
+5. Production Considerations - Scalability, cost, security
+6. Trade-offs - What you cut, what you'd add next
+
+EVALUATION (35-min live interview if selected):
+- 10 min: Demo walkthrough
+- 15 min: AI usage deep dive
+- 10 min: Production discussion
+
+SCORING:
+- AI-Native Development (40%) - Tool proficiency, prompts, iteration
+- Technical Execution (30%) - Features work, clean code, deployed
+- Problem-Solving (15%) - Risk logic, scalability, security, trade-offs
+- Documentation (15%) - Clear README, AI evidence
+
+DATA GENERATION:
+The document includes a Python script to generate sample tutoring data:
+- 75 students
+- 12 weeks of sessions
+- ~1500 sessions total
+- Student archetypes: thriving, stable, declining, struggling
+- Output: tutoring_data.csv
+
+AI RECOMMENDATION EXAMPLES (VT-Specific):
+Tutoring Adjustments:
+- Increase session frequency from 1x to 2x per week
+- Schedule back-to-back sessions to maintain momentum
+- Switch from 30-minute to 60-minute session format
+- Match with different tutor who specializes in [subject]
+- Add second subject (struggling in multiple areas)
+
+Scheduling & Availability:
+- Move sessions to earlier time slot (better engagement pattern)
+- Book consistent weekly schedule (currently irregular)
+- Add weekend session to catch up on missed material
+
+Parent/Admin Communication:
+- Send progress alert to administrator
+- Schedule parent conference to discuss attendance pattern
+- Share tutor notes and engagement trends with guardian
+
+Academic Support:
+- Assign practice problems between sessions
+- Provide supplemental learning materials for [topic]
+- Focus next 3 sessions on [specific struggling area]
+- Review session recordings to identify knowledge gaps
+
+Intervention Escalation:
+- Flag for academic intervention team review
+- Recommend assessment for additional support needs
+- Place on monitoring list for weekly check-ins
+
+TIPS:
+- Use AI for: Scaffolding, components, data processing, LLM integration, debugging
+- You decide: Architecture, risk logic, UX, prompt engineering
+- Ship working is better than perfect - Core features matter most
+EOF
+cat /home/claude/case_study_summary.txt
+Output
+
+NERDY - DIRECTOR OF ENGINEERING CASE STUDY
+Time: Max 3 hours
+
+THE CHALLENGE:
+Build an AI-powered dashboard that identifies at-risk students in Varsity Tutors and recommends interventions.
+
+REQUIREMENTS:
+- Student list with risk indicators (high/medium/low)
+- AI-generated explanations of WHY each student is at-risk
+- AI-generated action recommendations per student
+- At least one data visualization (engagement trends, etc.)
+
+TECHNICAL REQUIREMENTS:
+- Must use an LLM (Claude, OpenAI, Gemini, etc) for risk explanations and recommendations
+- Deploy to public URL (Vercel, Netlify, etc.)
+- Load time <3 seconds
+- Tech stack: Your choice (React, Vue, Python, Node.js, etc.)
+- AI coding tools: Use any (Cursor, Claude Code, Copilot, Windsurf, etc)
+
+SUBMISSION REQUIREMENTS:
+1. Deployed dashboard URL (public link)
+2. GitHub repository
+3. 3-5 min demo video link (Loom/YouTube/etc)
+4. AI development evidence:
+   - Development log with prompts & timestamps
+   - Git history with AI attribution
+
+REQUIRED DOCUMENTATION (README):
+1. Setup - How to run locally
+2. AI Development Process ⭐ - Which tools, % AI-generated, effective prompts, time breakdown
+3. Risk Logic - How you define "at-risk" and why
+4. AI Implementation - How you're using LLM for insights
+5. Production Considerations - Scalability, cost, security
+6. Trade-offs - What you cut, what you'd add next
+
+EVALUATION (35-min live interview if selected):
+- 10 min: Demo walkthrough
+- 15 min: AI usage deep dive
+- 10 min: Production discussion
+
+SCORING:
+- AI-Native Development (40%) - Tool proficiency, prompts, iteration
+- Technical Execution (30%) - Features work, clean code, deployed
+- Problem-Solving (15%) - Risk logic, scalability, security, trade-offs
+- Documentation (15%) - Clear README, AI evidence
+
+DATA GENERATION:
+The document includes a Python script to generate sample tutoring data:
+- 75 students
+- 12 weeks of sessions
+- ~1500 sessions total
+- Student archetypes: thriving, stable, declining, struggling
+- Output: tutoring_data.csv
+
+AI RECOMMENDATION EXAMPLES (VT-Specific):
+Tutoring Adjustments:
+- Increase session frequency from 1x to 2x per week
+- Schedule back-to-back sessions to maintain momentum
+- Switch from 30-minute to 60-minute session format
+- Match with different tutor who specializes in [subject]
+- Add second subject (struggling in multiple areas)
+
+Scheduling & Availability:
+- Move sessions to earlier time slot (better engagement pattern)
+- Book consistent weekly schedule (currently irregular)
+- Add weekend session to catch up on missed material
+
+Parent/Admin Communication:
+- Send progress alert to administrator
+- Schedule parent conference to discuss attendance pattern
+- Share tutor notes and engagement trends with guardian
+
+Academic Support:
+- Assign practice problems between sessions
+- Provide supplemental learning materials for [topic]
+- Focus next 3 sessions on [specific struggling area]
+- Review session recordings to identify knowledge gaps
+
+Intervention Escalation:
+- Flag for academic intervention team review
+- Recommend assessment for additional support needs
+- Place on monitoring list for weekly check-ins
+
+TIPS:
+- Use AI for: Scaffolding, components, data processing, LLM integration, debugging
+- You decide: Architecture, risk logic, UX, prompt engineering
+- Ship working is better than perfect - Core features matter most
