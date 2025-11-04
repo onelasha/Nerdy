@@ -163,7 +163,8 @@ def calculate_risk_metrics(df):
 def generate_ai_explanation(student_metrics, student_data):
     """Generate AI explanation for why a student is at-risk using Claude"""
     try:
-        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        # Try to get API key from Streamlit secrets first, then environment variable
+        api_key = st.secrets.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
         if not api_key:
             return "⚠️ ANTHROPIC_API_KEY not set. Using rule-based explanation instead.\n\n" + generate_rule_based_explanation(student_metrics, student_data)
         
@@ -189,7 +190,7 @@ Recent Session Data:
 Provide a concise 2-3 sentence explanation of the key risk factors and patterns you observe."""
 
         message = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
+            model="claude-3-5-sonnet-20240620",
             max_tokens=300,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -228,7 +229,8 @@ def generate_rule_based_explanation(student_metrics, student_data):
 def generate_ai_recommendations(student_metrics, student_data):
     """Generate AI-powered intervention recommendations"""
     try:
-        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        # Try to get API key from Streamlit secrets first, then environment variable
+        api_key = st.secrets.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
         if not api_key:
             return generate_rule_based_recommendations(student_metrics)
         
@@ -250,7 +252,7 @@ Key Metrics:
 Provide 3 actionable recommendations as a numbered list. Be specific and practical."""
 
         message = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
+            model="claude-3-5-sonnet-20240620",
             max_tokens=400,
             messages=[{"role": "user", "content": prompt}]
         )
