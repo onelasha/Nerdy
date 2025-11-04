@@ -456,23 +456,25 @@ def main():
             fig = create_engagement_trend_chart(df, row['student_id'])
             st.plotly_chart(fig, use_container_width=True)
             
-            # AI Explanation
-            st.subheader("🤖 AI Analysis: Why is this student at-risk?")
-            with st.spinner("Generating AI explanation..."):
-                explanation = generate_ai_explanation(row, student_data)
-                st.info(explanation)
-            
             # Risk Factors
             if row['risk_factors']:
                 st.subheader("⚠️ Risk Factors")
                 for factor in row['risk_factors']:
                     st.markdown(f"- {factor}")
             
-            # AI Recommendations
+            # AI Explanation - Only generate when button is clicked
+            st.subheader("🤖 AI Analysis: Why is this student at-risk?")
+            if st.button("Generate AI Explanation", key=f"explain_{row['student_id']}"):
+                with st.spinner("Generating AI explanation..."):
+                    explanation = generate_ai_explanation(row, student_data)
+                    st.info(explanation)
+            
+            # AI Recommendations - Only generate when button is clicked
             st.subheader("💡 Recommended Interventions")
-            with st.spinner("Generating recommendations..."):
-                recommendations = generate_ai_recommendations(row, student_data)
-                st.success(recommendations)
+            if st.button("Generate AI Recommendations", key=f"recommend_{row['student_id']}"):
+                with st.spinner("Generating recommendations..."):
+                    recommendations = generate_ai_recommendations(row, student_data)
+                    st.success(recommendations)
             
             # Recent sessions
             st.subheader("📅 Recent Sessions")
