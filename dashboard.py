@@ -190,7 +190,7 @@ Recent Session Data:
 Provide a concise 2-3 sentence explanation of the key risk factors and patterns you observe."""
 
         message = client.messages.create(
-            model="claude-3-5-sonnet-20240620",
+            model="claude-3-opus-20240229",
             max_tokens=300,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -252,7 +252,7 @@ Key Metrics:
 Provide 3 actionable recommendations as a numbered list. Be specific and practical."""
 
         message = client.messages.create(
-            model="claude-3-5-sonnet-20240620",
+            model="claude-3-opus-20240229",
             max_tokens=400,
             messages=[{"role": "user", "content": prompt}]
         )
